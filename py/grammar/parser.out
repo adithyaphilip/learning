@@ -1,0 +1,196 @@
+Created by PLY version 3.8 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> S
+Rule 1     S -> B1 S CB1 S
+Rule 2     S -> B2 S CB2 S
+Rule 3     S -> B3 S CB3 S
+Rule 4     S -> <empty>
+
+Terminals, with rules where they appear
+
+B1                   : 1
+B2                   : 2
+B3                   : 3
+CB1                  : 1
+CB2                  : 2
+CB3                  : 3
+error                : 
+
+Nonterminals, with rules where they appear
+
+S                    : 1 1 2 2 3 3 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . S
+    (1) S -> . B1 S CB1 S
+    (2) S -> . B2 S CB2 S
+    (3) S -> . B3 S CB3 S
+    (4) S -> .
+
+    B1              shift and go to state 2
+    B2              shift and go to state 1
+    B3              shift and go to state 4
+    $end            reduce using rule 4 (S -> .)
+
+    S                              shift and go to state 3
+
+state 1
+
+    (2) S -> B2 . S CB2 S
+    (1) S -> . B1 S CB1 S
+    (2) S -> . B2 S CB2 S
+    (3) S -> . B3 S CB3 S
+    (4) S -> .
+
+    B1              shift and go to state 2
+    B2              shift and go to state 1
+    B3              shift and go to state 4
+    CB2             reduce using rule 4 (S -> .)
+
+    S                              shift and go to state 5
+
+state 2
+
+    (1) S -> B1 . S CB1 S
+    (1) S -> . B1 S CB1 S
+    (2) S -> . B2 S CB2 S
+    (3) S -> . B3 S CB3 S
+    (4) S -> .
+
+    B1              shift and go to state 2
+    B2              shift and go to state 1
+    B3              shift and go to state 4
+    CB1             reduce using rule 4 (S -> .)
+
+    S                              shift and go to state 6
+
+state 3
+
+    (0) S' -> S .
+
+
+
+state 4
+
+    (3) S -> B3 . S CB3 S
+    (1) S -> . B1 S CB1 S
+    (2) S -> . B2 S CB2 S
+    (3) S -> . B3 S CB3 S
+    (4) S -> .
+
+    B1              shift and go to state 2
+    B2              shift and go to state 1
+    B3              shift and go to state 4
+    CB3             reduce using rule 4 (S -> .)
+
+    S                              shift and go to state 7
+
+state 5
+
+    (2) S -> B2 S . CB2 S
+
+    CB2             shift and go to state 8
+
+
+state 6
+
+    (1) S -> B1 S . CB1 S
+
+    CB1             shift and go to state 9
+
+
+state 7
+
+    (3) S -> B3 S . CB3 S
+
+    CB3             shift and go to state 10
+
+
+state 8
+
+    (2) S -> B2 S CB2 . S
+    (1) S -> . B1 S CB1 S
+    (2) S -> . B2 S CB2 S
+    (3) S -> . B3 S CB3 S
+    (4) S -> .
+
+    B1              shift and go to state 2
+    B2              shift and go to state 1
+    B3              shift and go to state 4
+    $end            reduce using rule 4 (S -> .)
+    CB2             reduce using rule 4 (S -> .)
+    CB1             reduce using rule 4 (S -> .)
+    CB3             reduce using rule 4 (S -> .)
+
+    S                              shift and go to state 11
+
+state 9
+
+    (1) S -> B1 S CB1 . S
+    (1) S -> . B1 S CB1 S
+    (2) S -> . B2 S CB2 S
+    (3) S -> . B3 S CB3 S
+    (4) S -> .
+
+    B1              shift and go to state 2
+    B2              shift and go to state 1
+    B3              shift and go to state 4
+    $end            reduce using rule 4 (S -> .)
+    CB2             reduce using rule 4 (S -> .)
+    CB1             reduce using rule 4 (S -> .)
+    CB3             reduce using rule 4 (S -> .)
+
+    S                              shift and go to state 12
+
+state 10
+
+    (3) S -> B3 S CB3 . S
+    (1) S -> . B1 S CB1 S
+    (2) S -> . B2 S CB2 S
+    (3) S -> . B3 S CB3 S
+    (4) S -> .
+
+    B1              shift and go to state 2
+    B2              shift and go to state 1
+    B3              shift and go to state 4
+    $end            reduce using rule 4 (S -> .)
+    CB2             reduce using rule 4 (S -> .)
+    CB1             reduce using rule 4 (S -> .)
+    CB3             reduce using rule 4 (S -> .)
+
+    S                              shift and go to state 13
+
+state 11
+
+    (2) S -> B2 S CB2 S .
+
+    CB3             reduce using rule 2 (S -> B2 S CB2 S .)
+    CB1             reduce using rule 2 (S -> B2 S CB2 S .)
+    CB2             reduce using rule 2 (S -> B2 S CB2 S .)
+    $end            reduce using rule 2 (S -> B2 S CB2 S .)
+
+
+state 12
+
+    (1) S -> B1 S CB1 S .
+
+    CB3             reduce using rule 1 (S -> B1 S CB1 S .)
+    CB1             reduce using rule 1 (S -> B1 S CB1 S .)
+    CB2             reduce using rule 1 (S -> B1 S CB1 S .)
+    $end            reduce using rule 1 (S -> B1 S CB1 S .)
+
+
+state 13
+
+    (3) S -> B3 S CB3 S .
+
+    CB3             reduce using rule 3 (S -> B3 S CB3 S .)
+    CB1             reduce using rule 3 (S -> B3 S CB3 S .)
+    CB2             reduce using rule 3 (S -> B3 S CB3 S .)
+    $end            reduce using rule 3 (S -> B3 S CB3 S .)
+

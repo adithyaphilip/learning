@@ -1,0 +1,56 @@
+Please enter input values
+Enter number of hidden layers
+Enter no. of nodes in hidden layer #1
+Enter values of output nodes
+Enter max number of iterations to perform
+Enter minimum change in weight to continue iterating
+----------------------------------------------------------
+First Iteration
+Printing Weights and Biases (as applicable):
+
+Input Layer
+Weights: [1.393722561386907, 0.4172849928794549]
+Weights: [-0.8221558310653455, 0.9751214913761841]
+Weights: [-0.46600399788238833, -0.42667843758559326]
+
+Hidden Layer
+Bias: 0.02191675277323435 Weights: [0.6878534349202025, -0.2735284762565923]
+Bias: -0.689488451253555 Weights: [0.2234804049625122, 0.10338567614301374]
+
+Output Layer
+Bias: 0.8823381682028496
+Bias: -0.9204957677217404
+
+----------------------------------------------------------
+No. of Iterations: 407
+Termination Reason: Maximum change in weights (9.97643e-07) was lesser than minimum change required (1e-06)
+All possible termination criteria - iterations reaches 1000 or change in weights becomes less than 1e-06
+----------------------------------------------------------
+Final Iteration
+Printing Weights and Biases (as applicable):
+
+Input Layer
+Weights: [1.4540216205414618, 0.42257801074148243]
+Weights: [-0.8070810662767076, 0.9764447458416915]
+Weights: [-0.4961535274596665, -0.42932494651660724]
+
+Hidden Layer
+Bias: 0.08221581192779012 Weights: [0.7391843878009967, -0.35927492152957335]
+Bias: -0.684195433391527 Weights: [0.23354923077044146, 0.08653606222411256]
+
+Output Layer
+Bias: 1.9795986478286465
+Bias: -2.2597584238612005
+
+----------------------------------------------------------
+Output values of nodes in 0th layer
+Output: 1.0
+Output: 0.25
+Output: -0.5
+Output values of nodes in 1th layer
+Output: 0.6499439192742238
+Output: 0.12753075064887137
+Output values of nodes in 2th layer
+Output: 0.9823418328279779
+Output: -0.9822471535812792
+Final output of neural network: [0.9823418328279779, -0.9822471535812792]

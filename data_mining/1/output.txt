@@ -1,0 +1,200 @@
+Step 1:
+Test Set ids:
+[3, 25, 60, 78, 96, 108, 122, 134, 139, 144]
+
+Step 2:
+All Species
++--------------+---------+---------+--------------------+--------+--------------------+
+|  Attribute   | Minimum | Maximum |        Mean        | Median |   Std. Deviation   |
++--------------+---------+---------+--------------------+--------+--------------------+
+|      Id      |    1    |   150   |        74.4        |  73.5  | 42.86437081906469  |
+| Petal Length |    1    |   6.9   | 3.7171428571428593 |  4.3   | 1.7679666632742157 |
+| Petal Width  |   0.1   |   2.5   | 1.1842857142857146 |  1.3   | 0.7633826440419572 |
+| Sepal Length |   4.3   |   7.9   |  5.83857142857143  |  5.8   | 0.8249316607440481 |
+| Sepal Width  |    2    |   4.4   | 3.0614285714285723 |  3.0   | 0.4460278201261846 |
++--------------+---------+---------+--------------------+--------+--------------------+
+Setosa
++--------------+---------+---------+--------------------+--------+---------------------+
+|  Attribute   | Minimum | Maximum |        Mean        | Median |    Std. Deviation   |
++--------------+---------+---------+--------------------+--------+---------------------+
+|      Id      |    1    |    50   | 25.979166666666668 |  26.5  |  14.357764425757777 |
+| Petal Length |    1    |   1.9   | 1.4562499999999998 |  1.5   | 0.16189792308735818 |
+| Petal Width  |   0.1   |   0.6   | 0.2479166666666666 |  0.2   | 0.10604555493853701 |
+| Sepal Length |   4.3   |   5.8   | 5.016666666666667  |  5.0   |  0.3519785346990426 |
+| Sepal Width  |   2.3   |   4.4   | 3.4333333333333336 |  3.4   |  0.3815174380753218 |
++--------------+---------+---------+--------------------+--------+---------------------+
+Versicolor
++--------------+---------+---------+--------------------+--------+---------------------+
+|  Attribute   | Minimum | Maximum |        Mean        | Median |    Std. Deviation   |
++--------------+---------+---------+--------------------+--------+---------------------+
+|      Id      |    51   |   100   | 75.34042553191489  |   75   |  14.398990206533908 |
+| Petal Length |    3    |   5.1   | 4.253191489361702  |  4.4   |  0.4644150124160001 |
+| Petal Width  |    1    |   1.8   | 1.3191489361702127 |  1.3   | 0.19311367820958159 |
+| Sepal Length |   4.9   |    7    | 5.940425531914894  |  5.9   |  0.5026142611569463 |
+| Sepal Width  |    2    |   3.4   | 2.7617021276595746 |  2.8   |  0.3165997483160248 |
++--------------+---------+---------+--------------------+--------+---------------------+
+Virginica
++--------------+---------+---------+--------------------+--------+---------------------+
+|  Attribute   | Minimum | Maximum |        Mean        | Median |    Std. Deviation   |
++--------------+---------+---------+--------------------+--------+---------------------+
+|      Id      |   101   |   150   | 125.06666666666666 |  125   |  14.52109576520388  |
+| Petal Length |   4.5   |   6.9   | 5.568888888888888  |  5.6   |  0.538236718769824  |
+| Petal Width  |   1.4   |   2.5   | 2.042222222222222  |   2    | 0.26790453431431765 |
+| Sepal Length |   4.9   |   7.9   | 6.608888888888887  |  6.5   |  0.6295755968101028 |
+| Sepal Width  |   2.2   |   3.8   | 2.977777777777777  |   3    |  0.3325917677132498 |
++--------------+---------+---------+--------------------+--------+---------------------+
+
+Distance Summary:
++------------------+-----------------------------------------------+-------------------------------------+-------------------------------------+
+| Distance Measure |                   Euclidean                   |              Manhattan              |               Supremum              |
++------------------+-----------------------------------------------+-------------------------------------+-------------------------------------+
+|     Minimum      |      0.0, 102(Virginica), 143(Virginica)      | 0.0, 102(Virginica), 143(Virginica) | 0.0, 102(Virginica), 143(Virginica) |
+|     Maximum      | 7.085195833567341, 119(Virginica), 14(Setosa) |   12.1, 119(Virginica), 23(Setosa)  |   5.9, 119(Virginica), 23(Setosa)   |
++------------------+-----------------------------------------------+-------------------------------------+-------------------------------------+
+
+Step 3:
+
+K = 1
++---------+------------+---------------------+---------------------+---------------------+
+| Test ID |   Actual   | Pred. Euclidean     | Pred. Manhattan     | Pred. Supremum      |
++---------+------------+---------------------+---------------------+---------------------+
+|    3    |   Setosa   | Nearest: Setosa     | Nearest: Setosa     | Nearest: Setosa     |
+|         |            | Chosen: Setosa      | Chosen: Setosa      | Chosen: Setosa      |
+|    25   |   Setosa   | Nearest: Setosa     | Nearest: Setosa     | Nearest: Setosa     |
+|         |            | Chosen: Setosa      | Chosen: Setosa      | Chosen: Setosa      |
+|    60   | Versicolor | Nearest: Versicolor | Nearest: Versicolor | Nearest: Versicolor |
+|         |            | Chosen: Versicolor  | Chosen: Versicolor  | Chosen: Versicolor  |
+|    78   | Versicolor | Nearest: Versicolor | Nearest: Versicolor | Nearest: Versicolor |
+|         |            | Chosen: Versicolor  | Chosen: Versicolor  | Chosen: Versicolor  |
+|    96   | Versicolor | Nearest: Versicolor | Nearest: Versicolor | Nearest: Versicolor |
+|         |            | Chosen: Versicolor  | Chosen: Versicolor  | Chosen: Versicolor  |
+|   108   | Virginica  | Nearest: Virginica  | Nearest: Virginica  | Nearest: Virginica  |
+|         |            | Chosen: Virginica   | Chosen: Virginica   | Chosen: Virginica   |
+|   122   | Virginica  | Nearest: Virginica  | Nearest: Virginica  | Nearest: Virginica  |
+|         |            | Chosen: Virginica   | Chosen: Virginica   | Chosen: Virginica   |
+|   134   | Virginica  | Nearest: Versicolor | Nearest: Versicolor | Nearest: Versicolor |
+|         |            | Chosen: Versicolor  | Chosen: Versicolor  | Chosen: Versicolor  |
+|   139   | Virginica  | Nearest: Virginica  | Nearest: Virginica  | Nearest: Virginica  |
+|         |            | Chosen: Virginica   | Chosen: Virginica   | Chosen: Virginica   |
+|   144   | Virginica  | Nearest: Virginica  | Nearest: Virginica  | Nearest: Virginica  |
+|         |            | Chosen: Virginica   | Chosen: Virginica   | Chosen: Virginica   |
++---------+------------+---------------------+---------------------+---------------------+
+Euclidean Accuracy: 0.9
+Manhattan Accuracy: 0.9
+Supremum Accuracy: 0.9
+
+K = 2
++---------+------------+--------------------------------+--------------------------------+--------------------------------+
+| Test ID |   Actual   | Pred. Euclidean                | Pred. Manhattan                | Pred. Supremum                 |
++---------+------------+--------------------------------+--------------------------------+--------------------------------+
+|    3    |   Setosa   | Nearest: Setosa,Setosa         | Nearest: Setosa,Setosa         | Nearest: Setosa,Setosa         |
+|         |            | Chosen: Setosa                 | Chosen: Setosa                 | Chosen: Setosa                 |
+|    25   |   Setosa   | Nearest: Setosa,Setosa         | Nearest: Setosa,Setosa         | Nearest: Setosa,Setosa         |
+|         |            | Chosen: Setosa                 | Chosen: Setosa                 | Chosen: Setosa                 |
+|    60   | Versicolor | Nearest: Versicolor,Versicolor | Nearest: Versicolor,Versicolor | Nearest: Versicolor,Versicolor |
+|         |            | Chosen: Versicolor             | Chosen: Versicolor             | Chosen: Versicolor             |
+|    78   | Versicolor | Nearest: Versicolor,Versicolor | Nearest: Versicolor,Versicolor | Nearest: Versicolor,Virginica  |
+|         |            | Chosen: Versicolor             | Chosen: Versicolor             | Chosen: Virginica              |
+|    96   | Versicolor | Nearest: Versicolor,Versicolor | Nearest: Versicolor,Versicolor | Nearest: Versicolor,Versicolor |
+|         |            | Chosen: Versicolor             | Chosen: Versicolor             | Chosen: Versicolor             |
+|   108   | Virginica  | Nearest: Virginica,Virginica   | Nearest: Virginica,Virginica   | Nearest: Virginica,Virginica   |
+|         |            | Chosen: Virginica              | Chosen: Virginica              | Chosen: Virginica              |
+|   122   | Virginica  | Nearest: Virginica,Virginica   | Nearest: Virginica,Virginica   | Nearest: Virginica,Virginica   |
+|         |            | Chosen: Virginica              | Chosen: Virginica              | Chosen: Virginica              |
+|   134   | Virginica  | Nearest: Versicolor,Versicolor | Nearest: Versicolor,Versicolor | Nearest: Versicolor,Versicolor |
+|         |            | Chosen: Versicolor             | Chosen: Versicolor             | Chosen: Versicolor             |
+|   139   | Virginica  | Nearest: Virginica,Versicolor  | Nearest: Virginica,Versicolor  | Nearest: Virginica,Virginica   |
+|         |            | Chosen: Virginica              | Chosen: Virginica              | Chosen: Virginica              |
+|   144   | Virginica  | Nearest: Virginica,Virginica   | Nearest: Virginica,Virginica   | Nearest: Virginica,Virginica   |
+|         |            | Chosen: Virginica              | Chosen: Virginica              | Chosen: Virginica              |
++---------+------------+--------------------------------+--------------------------------+--------------------------------+
+Euclidean Accuracy: 0.9
+Manhattan Accuracy: 0.9
+Supremum Accuracy: 0.8
+
+K = 3
++---------+------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+
+| Test ID |   Actual   | Pred. Euclidean                           | Pred. Manhattan                           | Pred. Supremum                            |
++---------+------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+
+|    3    |   Setosa   | Nearest: Setosa,Setosa,Setosa             | Nearest: Setosa,Setosa,Setosa             | Nearest: Setosa,Setosa,Setosa             |
+|         |            | Chosen: Setosa                            | Chosen: Setosa                            | Chosen: Setosa                            |
+|    25   |   Setosa   | Nearest: Setosa,Setosa,Setosa             | Nearest: Setosa,Setosa,Setosa             | Nearest: Setosa,Setosa,Setosa             |
+|         |            | Chosen: Setosa                            | Chosen: Setosa                            | Chosen: Setosa                            |
+|    60   | Versicolor | Nearest: Versicolor,Versicolor,Versicolor | Nearest: Versicolor,Versicolor,Versicolor | Nearest: Versicolor,Versicolor,Versicolor |
+|         |            | Chosen: Versicolor                        | Chosen: Versicolor                        | Chosen: Versicolor                        |
+|    78   | Versicolor | Nearest: Versicolor,Versicolor,Virginica  | Nearest: Versicolor,Versicolor,Virginica  | Nearest: Versicolor,Virginica,Versicolor  |
+|         |            | Chosen: Versicolor                        | Chosen: Versicolor                        | Chosen: Versicolor                        |
+|    96   | Versicolor | Nearest: Versicolor,Versicolor,Versicolor | Nearest: Versicolor,Versicolor,Versicolor | Nearest: Versicolor,Versicolor,Versicolor |
+|         |            | Chosen: Versicolor                        | Chosen: Versicolor                        | Chosen: Versicolor                        |
+|   108   | Virginica  | Nearest: Virginica,Virginica,Virginica    | Nearest: Virginica,Virginica,Virginica    | Nearest: Virginica,Virginica,Virginica    |
+|         |            | Chosen: Virginica                         | Chosen: Virginica                         | Chosen: Virginica                         |
+|   122   | Virginica  | Nearest: Virginica,Virginica,Virginica    | Nearest: Virginica,Virginica,Virginica    | Nearest: Virginica,Virginica,Virginica    |
+|         |            | Chosen: Virginica                         | Chosen: Virginica                         | Chosen: Virginica                         |
+|   134   | Virginica  | Nearest: Versicolor,Versicolor,Virginica  | Nearest: Versicolor,Versicolor,Virginica  | Nearest: Versicolor,Versicolor,Virginica  |
+|         |            | Chosen: Versicolor                        | Chosen: Versicolor                        | Chosen: Versicolor                        |
+|   139   | Virginica  | Nearest: Virginica,Versicolor,Virginica   | Nearest: Virginica,Versicolor,Virginica   | Nearest: Virginica,Virginica,Versicolor   |
+|         |            | Chosen: Virginica                         | Chosen: Virginica                         | Chosen: Virginica                         |
+|   144   | Virginica  | Nearest: Virginica,Virginica,Virginica    | Nearest: Virginica,Virginica,Virginica    | Nearest: Virginica,Virginica,Virginica    |
+|         |            | Chosen: Virginica                         | Chosen: Virginica                         | Chosen: Virginica                         |
++---------+------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+
+Euclidean Accuracy: 0.9
+Manhattan Accuracy: 0.9
+Supremum Accuracy: 0.9
+
+K = 4
++---------+------------+------------------------------------------------------+------------------------------------------------------+------------------------------------------------------+
+| Test ID |   Actual   | Pred. Euclidean                                      | Pred. Manhattan                                      | Pred. Supremum                                       |
++---------+------------+------------------------------------------------------+------------------------------------------------------+------------------------------------------------------+
+|    3    |   Setosa   | Nearest: Setosa,Setosa,Setosa,Setosa                 | Nearest: Setosa,Setosa,Setosa,Setosa                 | Nearest: Setosa,Setosa,Setosa,Setosa                 |
+|         |            | Chosen: Setosa                                       | Chosen: Setosa                                       | Chosen: Setosa                                       |
+|    25   |   Setosa   | Nearest: Setosa,Setosa,Setosa,Setosa                 | Nearest: Setosa,Setosa,Setosa,Setosa                 | Nearest: Setosa,Setosa,Setosa,Setosa                 |
+|         |            | Chosen: Setosa                                       | Chosen: Setosa                                       | Chosen: Setosa                                       |
+|    60   | Versicolor | Nearest: Versicolor,Versicolor,Versicolor,Versicolor | Nearest: Versicolor,Versicolor,Versicolor,Versicolor | Nearest: Versicolor,Versicolor,Versicolor,Versicolor |
+|         |            | Chosen: Versicolor                                   | Chosen: Versicolor                                   | Chosen: Versicolor                                   |
+|    78   | Versicolor | Nearest: Versicolor,Versicolor,Virginica,Versicolor  | Nearest: Versicolor,Versicolor,Virginica,Versicolor  | Nearest: Versicolor,Virginica,Versicolor,Versicolor  |
+|         |            | Chosen: Versicolor                                   | Chosen: Versicolor                                   | Chosen: Versicolor                                   |
+|    96   | Versicolor | Nearest: Versicolor,Versicolor,Versicolor,Versicolor | Nearest: Versicolor,Versicolor,Versicolor,Versicolor | Nearest: Versicolor,Versicolor,Versicolor,Versicolor |
+|         |            | Chosen: Versicolor                                   | Chosen: Versicolor                                   | Chosen: Versicolor                                   |
+|   108   | Virginica  | Nearest: Virginica,Virginica,Virginica,Virginica     | Nearest: Virginica,Virginica,Virginica,Virginica     | Nearest: Virginica,Virginica,Virginica,Virginica     |
+|         |            | Chosen: Virginica                                    | Chosen: Virginica                                    | Chosen: Virginica                                    |
+|   122   | Virginica  | Nearest: Virginica,Virginica,Virginica,Virginica     | Nearest: Virginica,Virginica,Virginica,Virginica     | Nearest: Virginica,Virginica,Virginica,Virginica     |
+|         |            | Chosen: Virginica                                    | Chosen: Virginica                                    | Chosen: Virginica                                    |
+|   134   | Virginica  | Nearest: Versicolor,Versicolor,Virginica,Virginica   | Nearest: Versicolor,Versicolor,Virginica,Virginica   | Nearest: Versicolor,Versicolor,Virginica,Virginica   |
+|         |            | Chosen: Virginica                                    | Chosen: Virginica                                    | Chosen: Virginica                                    |
+|   139   | Virginica  | Nearest: Virginica,Versicolor,Virginica,Virginica    | Nearest: Virginica,Versicolor,Virginica,Virginica    | Nearest: Virginica,Virginica,Versicolor,Virginica    |
+|         |            | Chosen: Virginica                                    | Chosen: Virginica                                    | Chosen: Virginica                                    |
+|   144   | Virginica  | Nearest: Virginica,Virginica,Virginica,Virginica     | Nearest: Virginica,Virginica,Virginica,Virginica     | Nearest: Virginica,Virginica,Virginica,Virginica     |
+|         |            | Chosen: Virginica                                    | Chosen: Virginica                                    | Chosen: Virginica                                    |
++---------+------------+------------------------------------------------------+------------------------------------------------------+------------------------------------------------------+
+Euclidean Accuracy: 1.0
+Manhattan Accuracy: 1.0
+Supremum Accuracy: 1.0
+
+K = 5
++---------+------------+-----------------------------------------------------------------+-----------------------------------------------------------------+-----------------------------------------------------------------+
+| Test ID |   Actual   | Pred. Euclidean                                                 | Pred. Manhattan                                                 | Pred. Supremum                                                  |
++---------+------------+-----------------------------------------------------------------+-----------------------------------------------------------------+-----------------------------------------------------------------+
+|    3    |   Setosa   | Nearest: Setosa,Setosa,Setosa,Setosa,Setosa                     | Nearest: Setosa,Setosa,Setosa,Setosa,Setosa                     | Nearest: Setosa,Setosa,Setosa,Setosa,Setosa                     |
+|         |            | Chosen: Setosa                                                  | Chosen: Setosa                                                  | Chosen: Setosa                                                  |
+|    25   |   Setosa   | Nearest: Setosa,Setosa,Setosa,Setosa,Setosa                     | Nearest: Setosa,Setosa,Setosa,Setosa,Setosa                     | Nearest: Setosa,Setosa,Setosa,Setosa,Setosa                     |
+|         |            | Chosen: Setosa                                                  | Chosen: Setosa                                                  | Chosen: Setosa                                                  |
+|    60   | Versicolor | Nearest: Versicolor,Versicolor,Versicolor,Versicolor,Versicolor | Nearest: Versicolor,Versicolor,Versicolor,Versicolor,Versicolor | Nearest: Versicolor,Versicolor,Versicolor,Versicolor,Versicolor |
+|         |            | Chosen: Versicolor                                              | Chosen: Versicolor                                              | Chosen: Versicolor                                              |
+|    78   | Versicolor | Nearest: Versicolor,Versicolor,Virginica,Versicolor,Virginica   | Nearest: Versicolor,Versicolor,Virginica,Versicolor,Virginica   | Nearest: Versicolor,Virginica,Versicolor,Versicolor,Virginica   |
+|         |            | Chosen: Versicolor                                              | Chosen: Versicolor                                              | Chosen: Versicolor                                              |
+|    96   | Versicolor | Nearest: Versicolor,Versicolor,Versicolor,Versicolor,Versicolor | Nearest: Versicolor,Versicolor,Versicolor,Versicolor,Versicolor | Nearest: Versicolor,Versicolor,Versicolor,Versicolor,Versicolor |
+|         |            | Chosen: Versicolor                                              | Chosen: Versicolor                                              | Chosen: Versicolor                                              |
+|   108   | Virginica  | Nearest: Virginica,Virginica,Virginica,Virginica,Virginica      | Nearest: Virginica,Virginica,Virginica,Virginica,Virginica      | Nearest: Virginica,Virginica,Virginica,Virginica,Virginica      |
+|         |            | Chosen: Virginica                                               | Chosen: Virginica                                               | Chosen: Virginica                                               |
+|   122   | Virginica  | Nearest: Virginica,Virginica,Virginica,Virginica,Virginica      | Nearest: Virginica,Virginica,Virginica,Virginica,Virginica      | Nearest: Virginica,Virginica,Virginica,Virginica,Virginica      |
+|         |            | Chosen: Virginica                                               | Chosen: Virginica                                               | Chosen: Virginica                                               |
+|   134   | Virginica  | Nearest: Versicolor,Versicolor,Virginica,Virginica,Virginica    | Nearest: Versicolor,Versicolor,Virginica,Virginica,Versicolor   | Nearest: Versicolor,Versicolor,Virginica,Virginica,Virginica    |
+|         |            | Chosen: Virginica                                               | Chosen: Versicolor                                              | Chosen: Virginica                                               |
+|   139   | Virginica  | Nearest: Virginica,Versicolor,Virginica,Virginica,Virginica     | Nearest: Virginica,Versicolor,Virginica,Virginica,Versicolor    | Nearest: Virginica,Virginica,Versicolor,Virginica,Virginica     |
+|         |            | Chosen: Virginica                                               | Chosen: Virginica                                               | Chosen: Virginica                                               |
+|   144   | Virginica  | Nearest: Virginica,Virginica,Virginica,Virginica,Virginica      | Nearest: Virginica,Virginica,Virginica,Virginica,Virginica      | Nearest: Virginica,Virginica,Virginica,Virginica,Virginica      |
+|         |            | Chosen: Virginica                                               | Chosen: Virginica                                               | Chosen: Virginica                                               |
++---------+------------+-----------------------------------------------------------------+-----------------------------------------------------------------+-----------------------------------------------------------------+
+Euclidean Accuracy: 1.0
+Manhattan Accuracy: 0.9
+Supremum Accuracy: 1.0

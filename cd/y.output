@@ -1,0 +1,156 @@
+Terminals unused in grammar
+
+   IF
+   COND
+   OP
+   CL
+   statement
+   ELSE
+   FUNC
+   INT
+   FLOAT
+   DOUBLE
+   Return
+
+
+Grammar
+
+    0 $accept: EXPR $end
+
+    1 EXPR: EXPR OPR EXPR
+    2     | EXPR EQ EXPR
+    3     | ID
+    4     | NUM
+    5     | FNUM
+    6     | DNUM
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+error (256)
+IF (258)
+COND (259)
+OP (260)
+CL (261)
+statement (262)
+ELSE (263)
+ID (264) 3
+FUNC (265)
+INT (266)
+FLOAT (267)
+DOUBLE (268)
+Return (269)
+OPR (270) 1
+EQ (271) 2
+NUM (272) 4
+FNUM (273) 5
+DNUM (274) 6
+
+
+Nonterminals, with rules where they appear
+
+$accept (20)
+    on left: 0
+EXPR (21)
+    on left: 1 2 3 4 5 6, on right: 0 1 2
+
+
+State 0
+
+    0 $accept: . EXPR $end
+
+    ID    shift, and go to state 1
+    NUM   shift, and go to state 2
+    FNUM  shift, and go to state 3
+    DNUM  shift, and go to state 4
+
+    EXPR  go to state 5
+
+
+State 1
+
+    3 EXPR: ID .
+
+    $default  reduce using rule 3 (EXPR)
+
+
+State 2
+
+    4 EXPR: NUM .
+
+    $default  reduce using rule 4 (EXPR)
+
+
+State 3
+
+    5 EXPR: FNUM .
+
+    $default  reduce using rule 5 (EXPR)
+
+
+State 4
+
+    6 EXPR: DNUM .
+
+    $default  reduce using rule 6 (EXPR)
+
+
+State 5
+
+    0 $accept: EXPR . $end
+    1 EXPR: EXPR . OPR EXPR
+    2     | EXPR . EQ EXPR
+
+    $end  shift, and go to state 6
+    OPR   shift, and go to state 7
+    EQ    shift, and go to state 8
+
+
+State 6
+
+    0 $accept: EXPR $end .
+
+    $default  accept
+
+
+State 7
+
+    1 EXPR: EXPR OPR . EXPR
+
+    ID    shift, and go to state 1
+    NUM   shift, and go to state 2
+    FNUM  shift, and go to state 3
+    DNUM  shift, and go to state 4
+
+    EXPR  go to state 9
+
+
+State 8
+
+    2 EXPR: EXPR EQ . EXPR
+
+    ID    shift, and go to state 1
+    NUM   shift, and go to state 2
+    FNUM  shift, and go to state 3
+    DNUM  shift, and go to state 4
+
+    EXPR  go to state 10
+
+
+State 9
+
+    1 EXPR: EXPR . OPR EXPR
+    1     | EXPR OPR EXPR .
+    2     | EXPR . EQ EXPR
+
+    $default  reduce using rule 1 (EXPR)
+
+
+State 10
+
+    1 EXPR: EXPR . OPR EXPR
+    2     | EXPR . EQ EXPR
+    2     | EXPR EQ EXPR .
+
+    $default  reduce using rule 2 (EXPR)

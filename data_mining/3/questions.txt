@@ -1,0 +1,18 @@
+1. Determine the average income for:
+a) Inner City Males: 26538.13 
+b) Middle Aged Rural Females: 27482.26
+c) Young Suburban People: 16227.50
++---------------------------+-------------+
+|          Category         | Avg. Income |
++---------------------------+-------------+
+| Inner City Males          | 26538.13    |
+| Middle Aged Rural Females | 27482.26    |
+| Young Suburban People     | 16227.50    |
++---------------------------+-------------+
+
+2. In the 2-D cuboids, which cells have a support of less than 5%?
+Ans: 5% of 600 (total number of entries) is 30. The cells that have a support (count) of less than 30 are:
+[Young, Rural] - 28
+[Middle, Suburban] - 22
+[Young, Suburban] - 20
+[Old, Suburban] - 20

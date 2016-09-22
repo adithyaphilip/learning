@@ -1,0 +1,9 @@
+Total no. of pixels: 10368
+No. of clusters: 4
+No. of noise points: 0
+Cluster # |Size      |Avg. Red  |Avg. Green|Avg. Blue 
+0         |3209      |255       |255       |255       
+1         |6148      |23        |47        |96        
+2         |580       |201       |217       |51        
+3         |431       |185       |125       |43        
+

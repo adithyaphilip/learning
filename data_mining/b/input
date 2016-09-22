@@ -1,0 +1,17 @@
+# this line is a comment. The first line is epsilon, second line is population, remaining lines are the adjacency list for each node in the graph, starting from 0 till the last node as numbered in the graph
+0.7
+4
+1 5 4 6
+5 0 2
+3 5 1
+2 5 4 6
+3 5 0 6
+1 2 3 4 0
+3 4 0 7 11 10
+11 6 12 8
+7 12 9
+8 12 10 13
+11 12 9 6
+12 7 6 10
+8 7 9 10 11
+9

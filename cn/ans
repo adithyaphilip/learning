@@ -1,0 +1,19 @@
+1. TCP, DNS, HTTP, SSDP, NBNS related to request, UDP, RIPv2, ARP, TLS v1.2 otherwise
+2. 0.543358s
+3. 128.119.245.12 - server address. LOCAL IP of computer is 10.2.21.53, external IP is not visible
+
+1. Both browser and server run HTTP 1.1
+2. en-US, en
+3. not viisble in HTTP request, but otherwise same as 3
+4. 200 OK
+5. 25th Oct, 2015 5:59:01 GMT
+6. 596
+7. Yes, packet listing windows gives only status code and message, HTTP version, and content type. Content-Length, for example, is present only in the packet content window
+8. No If-Modified-Since in the first request
+9. Yes, html based text data can be seen to be received after the HTTP header as the message body
+10. Yes, an if-modified line is present with 25th Oct, 2015 5:59:01 GMT (same as last modified returned by first request)
+11. 304 Not modified, no contents returned. This is because this was a condition GET request, and asked for contents only IF modified since 25th Oct, 2015 5:59:01 GMT. Since it was not modified, no explicit data was returned.
+12. 1, 26
+13. packet number 30 contains the information about the status code and phrase,while the full HTTP message is received onlu at 36
+14. 200 OK
+15. 4

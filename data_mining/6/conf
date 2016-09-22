@@ -1,0 +1,4 @@
+# This first line in this file is a comment (this). The successive lines are, respectively - path to data source file, training set size, name of column representing class
+/home/abrahamphilip/learning/data_mining/6/bank-data2.arff
+590
+pep

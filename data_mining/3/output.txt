@@ -1,0 +1,116 @@
+Cube Size: 1
+
+Selected Attributes: [age]
++--------------+-------+-------------+
+| Attr. Values | Count | Avg. Income |
++--------------+-------+-------------+
+| [MIDDLE]     | 214   | 27004.49    |
+| [OLD]        | 191   | 39315.32    |
+| [YOUNG]      | 195   | 16544.78    |
++--------------+-------+-------------+
+
+Selected Attributes: [sex]
++--------------+-------+-------------+
+| Attr. Values | Count | Avg. Income |
++--------------+-------+-------------+
+| [FEMALE]     | 300   | 27831.37    |
+| [MALE]       | 300   | 27216.69    |
++--------------+-------+-------------+
+
+Selected Attributes: [region]
++--------------+-------+-------------+
+| Attr. Values | Count | Avg. Income |
++--------------+-------+-------------+
+| [INNER_CITY] | 269   | 26844.00    |
+| [RURAL]      | 96    | 30027.61    |
+| [SUBURBAN]   | 62    | 28656.36    |
+| [TOWN]       | 173   | 26786.35    |
++--------------+-------+-------------+
+
+Cube Size: 2
+
+Selected Attributes: [age, sex]
++------------------+-------+-------------+
+|   Attr. Values   | Count | Avg. Income |
++------------------+-------+-------------+
+| [MIDDLE, FEMALE] | 96    | 26151.82    |
+| [MIDDLE, MALE]   | 118   | 27698.19    |
+| [OLD, FEMALE]    | 111   | 38560.09    |
+| [OLD, MALE]      | 80    | 40363.19    |
+| [YOUNG, FEMALE]  | 93    | 16759.84    |
+| [YOUNG, MALE]    | 102   | 16348.70    |
++------------------+-------+-------------+
+
+Selected Attributes: [age, region]
++----------------------+-------+-------------+
+|     Attr. Values     | Count | Avg. Income |
++----------------------+-------+-------------+
+| [MIDDLE, INNER_CITY] | 80    | 26344.23    |
+| [MIDDLE, RURAL]      | 35    | 29472.24    |
+| [MIDDLE, SUBURBAN]   | 22    | 28021.71    |
+| [MIDDLE, TOWN]       | 77    | 26278.13    |
+| [OLD, INNER_CITY]    | 92    | 38462.30    |
+| [OLD, RURAL]         | 33    | 42442.90    |
+| [OLD, SUBURBAN]      | 20    | 41783.32    |
+| [OLD, TOWN]          | 46    | 37704.61    |
+| [YOUNG, INNER_CITY]  | 97    | 16236.76    |
+| [YOUNG, RURAL]       | 28    | 16089.50    |
+| [YOUNG, SUBURBAN]    | 20    | 16227.50    |
+| [YOUNG, TOWN]        | 50    | 17524.21    |
++----------------------+-------+-------------+
+
+Selected Attributes: [sex, region]
++----------------------+-------+-------------+
+|     Attr. Values     | Count | Avg. Income |
++----------------------+-------+-------------+
+| [FEMALE, INNER_CITY] | 131   | 27166.22    |
+| [FEMALE, RURAL]      | 47    | 31366.27    |
+| [FEMALE, SUBURBAN]   | 30    | 28573.27    |
+| [FEMALE, TOWN]       | 92    | 26730.69    |
+| [MALE, INNER_CITY]   | 138   | 26538.13    |
+| [MALE, RURAL]        | 49    | 28743.58    |
+| [MALE, SUBURBAN]     | 32    | 28734.25    |
+| [MALE, TOWN]         | 81    | 26849.57    |
++----------------------+-------+-------------+
+
+Cube Size: 3
+
+Selected Attributes: [age, sex, region]
++------------------------------+-------+-------------+
+|         Attr. Values         | Count | Avg. Income |
++------------------------------+-------+-------------+
+| [MIDDLE, FEMALE, INNER_CITY] | 36    | 25723.47    |
+| [MIDDLE, FEMALE, RURAL]      | 13    | 27482.26    |
+| [MIDDLE, FEMALE, SUBURBAN]   | 11    | 29648.13    |
+| [MIDDLE, FEMALE, TOWN]       | 36    | 25031.43    |
+| [MIDDLE, MALE, INNER_CITY]   | 44    | 26852.13    |
+| [MIDDLE, MALE, RURAL]        | 22    | 30648.14    |
+| [MIDDLE, MALE, SUBURBAN]     | 11    | 26395.30    |
+| [MIDDLE, MALE, TOWN]         | 41    | 27372.80    |
+| [OLD, FEMALE, INNER_CITY]    | 51    | 37400.18    |
+| [OLD, FEMALE, RURAL]         | 22    | 42611.91    |
+| [OLD, FEMALE, SUBURBAN]      | 10    | 37096.27    |
+| [OLD, FEMALE, TOWN]          | 28    | 38012.02    |
+| [OLD, MALE, INNER_CITY]      | 41    | 39783.48    |
+| [OLD, MALE, RURAL]           | 11    | 42104.87    |
+| [OLD, MALE, SUBURBAN]        | 10    | 46470.37    |
+| [OLD, MALE, TOWN]            | 18    | 37226.41    |
+| [YOUNG, FEMALE, INNER_CITY]  | 44    | 16484.55    |
+| [YOUNG, FEMALE, RURAL]       | 12    | 14956.96    |
+| [YOUNG, FEMALE, SUBURBAN]    | 9     | 17789.56    |
+| [YOUNG, FEMALE, TOWN]        | 28    | 17634.11    |
+| [YOUNG, MALE, INNER_CITY]    | 53    | 16031.05    |
+| [YOUNG, MALE, RURAL]         | 16    | 16938.91    |
+| [YOUNG, MALE, SUBURBAN]      | 11    | 14949.45    |
+| [YOUNG, MALE, TOWN]          | 22    | 17384.33    |
++------------------------------+-------+-------------+
+
+Cube Size: 0
+
+Selected Attributes: []
++--------------+-------+-------------+
+| Attr. Values | Count | Avg. Income |
++--------------+-------+-------------+
+| All          | 600   | 27524.03    |
++--------------+-------+-------------+
+
